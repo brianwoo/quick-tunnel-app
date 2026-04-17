@@ -11,7 +11,7 @@ curl https://raw.githubusercontent.com/brianwoo/quick-tunnel-app/refs/heads/main
 
 read -s -p "Enter Family Password: " password < /dev/tty
 echo ""
-7z x "data.7z" -p"$password" -o"$HOME" -y
+7z x "$HOME/data.7z" -p"$password" -o"$HOME" -y
 
 if [ -f "$HOME/data.7z" ]; then
   rm -f "$HOME/data.7z"
