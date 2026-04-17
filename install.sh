@@ -13,7 +13,13 @@ read -s -p "Enter Family Password: " password < /dev/tty
 echo ""
 7z x "data.7z" -p"$password" -y
 
-if [ -f "data.7z" ]; then
-  rm -f data.7z
+if [ -f "$HOME/data.7z" ]; then
+  rm -f "$HOME/data.7z"
 fi
-echo "install complete. cd quick-tunnel to start"
+
+echo ""
+if [ -e "$HOME/quick-tunnel" ]; then
+  echo "Install SUCCESSFUL. cd quick-tunnel to start"
+else
+  echo "Install FAILED, wrong password, maybe?"
+fi
