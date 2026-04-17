@@ -8,8 +8,11 @@ fi
 
 #curl and save the file as data.7z
 curl https://raw.githubusercontent.com/brianwoo/quick-tunnel-app/refs/heads/main/data.7z -o data.7z
-exec < /dev/tty
-7z x data.7z
+
+read -s -p "Enter Family Password: " password < /dev/tty
+echo ""
+7z x "data.7z" -p"$password" -y
+
 if [ -f "data.7z" ]; then
   rm -f data.7z
 fi
