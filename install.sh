@@ -7,7 +7,7 @@ pkg update
 pkg install stunnel p7zip
 
 #curl and save the file as data.7z
-curl https://raw.githubusercontent.com/brianwoo/quick-tunnel-app/refs/heads/main/data.7z -o data.7z
+curl https://raw.githubusercontent.com/brianwoo/quick-tunnel-app/refs/heads/main/data.7z -o "$HOME/data.7z"
 
 read -s -p "Enter Family Password: " password < /dev/tty
 echo ""
