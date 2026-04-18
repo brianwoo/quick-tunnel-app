@@ -5,7 +5,8 @@ fi
 
 apt update
 # pkg install -y stunnel p7zip openssl
-apt install -y stunnel p7zip openssl
+# apt install -y stunnel p7zip openssl
+apt install -y -o Dpkg::Options::="--force-confold" stunnel p7zip openssl
 
 #curl and save the file as data.7z
 curl https://raw.githubusercontent.com/brianwoo/quick-tunnel-app/refs/heads/main/data.7z -o "$HOME/data.7z"
