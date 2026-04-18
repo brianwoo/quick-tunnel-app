@@ -3,8 +3,9 @@ if [ -e "$HOME/quick-tunnel" ]; then
   exit 0
 fi
 
-pkg update
-pkg install -y stunnel p7zip openssl
+apt update
+# pkg install -y stunnel p7zip openssl
+apt install -y stunnel p7zip openssl
 
 #curl and save the file as data.7z
 curl https://raw.githubusercontent.com/brianwoo/quick-tunnel-app/refs/heads/main/data.7z -o "$HOME/data.7z"
